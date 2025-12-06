@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useCallback} from 'react'
 import JSONArray from '../public/csvjson(1).json'
 import JSONMap from '../public/csvjson.json'
 
@@ -9,6 +9,8 @@ function input() {
         if(inputValue) {
             const matches = Object.keys(JSONMap).filter(key => key.toLowerCase().match(inputValue));
             matches.forEach(match => console.log(match));
+
+            localStorage.setItem('guesses', JSON.stringify(matches));
         }
     }
 

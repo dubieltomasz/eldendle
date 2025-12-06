@@ -1,7 +1,13 @@
-import Input from './input'
+import {useState, useCallback} from 'react'
+import Input from './input.tsx'
+import ListGuesses from './ListGuesses.tsx'
 import './App.css'
 
 function App() {
+  const [guesses, setGuesses] = useState<string[]>(
+    localStorage.getItem('guesses')?
+    JSON.parse(localStorage.getItem('guesses')!!):[]);
+  
   return (
     <>
       <Input />
@@ -17,28 +23,7 @@ function App() {
             <th>Upgrade Material</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>Germany</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>Germany</td>
-          </tr>
-        </tbody>
+        <ListGuesses guesses={guesses} />
       </table>
     </>
   )
