@@ -5,12 +5,12 @@ import './App.css'
 
 function App() {
   const [guesses, setGuesses] = useState<string[]>(
-    localStorage.getItem('guesses')?
-    JSON.parse(localStorage.getItem('guesses')!!):[]);
+    localStorage.getItem('guesses') != null ? JSON.parse(localStorage.getItem('guesses')!!) : []
+  );
   
   return (
     <>
-      <Input />
+      <Input onSubmit={setGuesses}/>
       <table>
         <thead>
           <tr>
