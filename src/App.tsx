@@ -34,35 +34,33 @@ function App() {
 
   return (
     <>
-      <Input search={setOptions} />
-      <table>
-        <thead>
-          <tr>
-            <th colSpan={2}>Weapon</th>
-            <th>Type</th>
-            <th>Damage</th>
-            <th>Critical Boost</th>
-            <th>Scaling</th>
-            <th>Weight</th>
-            <th>Upgrade Material</th>
-          </tr>
-        </thead>
-        <ListOptions options={options} sendGuess={addGuess} />
-      </table>
-      <table>
-        <thead>
-          <tr>
-            <th colSpan={2}>Weapon</th>
-            <th>Type</th>
-            <th>Damage</th>
-            <th>Critical Boost</th>
-            <th>Scaling</th>
-            <th>Weight</th>
-            <th>Upgrade Material</th>
-          </tr>
-        </thead>
-        <ListGuesses guesses={guesses}/>
-      </table>
+      <header>
+        <h1>Eldendle</h1>
+      </header>
+      <main>
+        <section className='box'>
+          <Input search={setOptions} />
+          <ListOptions options={options} sendGuess={addGuess} />
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th colSpan={2}>Weapon</th>
+              <th>Type</th>
+              <th>Damage</th>
+              <th>Critical Boost</th>
+              <th>Scaling</th>
+              <th>Weight</th>
+              <th>Upgrade Material</th>
+            </tr>
+          </thead>
+          <ListGuesses guesses={guesses} />
+        </table>
+      </main>
+      <footer>
+        <p>Eldendle - 2025</p>
+        <a href='https://github.com/dubieltomasz/eldendle' target='_blank'><img src='./src/assets/github-mark-white.png'/></a>
+      </footer>
     </>
   )
 }
