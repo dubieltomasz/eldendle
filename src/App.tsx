@@ -3,8 +3,11 @@ import Input from './Input.tsx'
 import ListOptions from './ListOptions.tsx'
 import './App.css'
 import ListGuesses from './ListGuesses.tsx';
+import JSONArray from '../public/weaponData.json';
 
 function App() {
+  const [todaysEldendle, setTodaysEldendle] = useState<number>(new Date().getDate() % JSONArray.length);
+
   const [lastGuessDate, setLastGuessDate] = useState<string>(
     localStorage.getItem('lastGuessDate') ? localStorage.getItem('lastGuessDate')!! : ""
   );
@@ -21,6 +24,10 @@ function App() {
       localStorage.setItem('guesses', JSON.stringify(newGuesses));
       return newGuesses;
     });
+
+    if(guess === todaysEldendle) {
+      alert("You won!!!");
+    }
   }
 
   const currentDate: string = new Date().toISOString().split('T')[0];
@@ -54,7 +61,7 @@ function App() {
               <th>Upgrade Material</th>
             </tr>
           </thead>
-          <ListGuesses guesses={guesses} />
+          <ListGuesses guesses={guesses} todaysEldendle={todaysEldendle}/>
         </table>
       </main>
       <footer>

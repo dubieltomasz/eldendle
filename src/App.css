@@ -44,18 +44,6 @@ table {
   border-spacing: 10px;
 }
 
-th {
-  width: 12%;
-  background-color: rgb(118, 96, 96);
-  border-radius: 5px;
-}
-
-td {
-  width: 12%;
-  background-color: gray;
-  border-radius: 5px;
-}
-
 .box {
   width: 80%;
   border-radius: 20px;
@@ -119,4 +107,28 @@ th, td, input {
 input:focus {
   border: 3px solid #484539;
   background: #0D0D09;
+}
+
+td.wrong {
+  background: linear-gradient(
+    180deg,
+    #493f0d,
+    #1B1914
+  );
+}
+
+td.veryWrong {
+  background: linear-gradient(
+    180deg,
+    #3b0505,
+    #1B1914
+  );
+}
+
+td.good {
+  background: linear-gradient(
+    180deg,
+    #084217,
+    #1B1914
+  );
 }

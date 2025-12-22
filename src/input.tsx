@@ -1,4 +1,4 @@
-import JSONArray from '../public/csvjson.json'
+import JSONArray from '../public/weaponData.json'
 
 interface Prop {
     search: (match: number[]) => void;
