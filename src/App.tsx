@@ -22,6 +22,7 @@ function App() {
     setGuesses(prevGuesses => {
       const newGuesses = [...prevGuesses, guess];
       localStorage.setItem('guesses', JSON.stringify(newGuesses));
+      setOptions([]);
       return newGuesses;
     });
 
@@ -44,6 +45,11 @@ function App() {
       <header>
         <h1>Eldendle</h1>
       </header>
+      <nav>
+        <a>
+          <h2>Weapon Guesser</h2>
+        </a>
+      </nav>
       <main>
         <section className='box'>
           <Input search={setOptions} />
