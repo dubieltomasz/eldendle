@@ -20,7 +20,7 @@ function ListOptions({ options, sendGuess }: Prop) {
                 <tr>
                     <th colSpan={2}>Weapon</th>
                     <th>Type</th>
-                    <th>Damage</th>
+                    <th>Damage Type</th>
                     <th>Critical Boost</th>
                     <th>Scaling</th>
                     <th>Weight</th>

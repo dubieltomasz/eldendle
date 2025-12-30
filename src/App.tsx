@@ -20,6 +20,9 @@ function App() {
     localStorage.getItem('guesses') ? JSON.parse(localStorage.getItem('guesses')!!) : []
   );
 
+  const [showDamage, setShowingDamage] = useState<boolean>(false);
+  const [showScaling, setShowingScaling] = useState<boolean>(false);
+
   function addGuess(guess: number) {
     setGuesses(prevGuesses => {
       const newGuesses = [...prevGuesses, guess];
@@ -62,15 +65,22 @@ function App() {
             <tr>
               <th colSpan={2}>Weapon</th>
               <th>Type</th>
-              <th>Damage</th>
+              <th>Damage Type</th>
               <th>Critical Boost</th>
               <th>Scaling</th>
               <th>Weight</th>
               <th>Upgrade Material</th>
             </tr>
           </thead>
-          <ListGuesses guesses={guesses} todaysEldendle={todaysEldendle}/>
+          <ListGuesses guesses={guesses} todaysEldendle={todaysEldendle} showDamage={showDamage} showScaling={showScaling}/>
         </table>
+        <section>
+          <label>Show damage type values</label>
+          <input type='checkbox' name='showValues' checked={showDamage} onChange={e => {setShowingDamage(!showDamage)}}/>
+          <br/>
+          <label>Show attribute scaling tier</label>
+          <input type='checkbox' name='showValues' checked={showScaling} onChange={e => {setShowingScaling(!showScaling)}}/>
+        </section>
       </main>
       <footer>
         <p>Eldendle - 2025</p>
