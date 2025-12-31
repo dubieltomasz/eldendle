@@ -1,4 +1,5 @@
-import JSONArray from '../public/weaponData.json'
+import JSONArray from '../../public/weaponData.json';
+import './Input.css';
 
 interface Prop {
     search: (match: number[]) => void;
@@ -9,7 +10,7 @@ function input({ search }: Prop) {
         const expression: string = inputValue.trim().toLowerCase();
         const matches: number[] = [];
 
-        if (expression !== "") {
+        if (expression !== '') {
             JSONArray.forEach((record, index: number) => {
                 if (record.Name.toLocaleLowerCase().match(expression)) {
                     matches.push(index);
@@ -22,8 +23,8 @@ function input({ search }: Prop) {
 
     return (
         <input
-            type="text"
-            name="inputName"
+            type='text'
+            name='inputName'
             onChange={that => {
                 onChangeFunction(that.target.value);
             }}

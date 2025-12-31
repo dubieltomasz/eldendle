@@ -1,0 +1,23 @@
+td.wrong {
+  background: linear-gradient(
+    180deg,
+    #493f0d,
+    #1B1914
+  );
+}
+
+td.veryWrong {
+  background: linear-gradient(
+    180deg,
+    #3b0505,
+    #1B1914
+  );
+}
+
+td.good {
+  background: linear-gradient(
+    180deg,
+    #084217,
+    #1B1914
+  );
+}
