@@ -46,7 +46,7 @@ function WeaponGuesser() {
 
     return (
         <main>
-            <section className='box'>
+            <section className='inputSection'>
                 <Input search={setOptions} />
                 <ListOptions options={options} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} />
             </section>
@@ -64,13 +64,13 @@ function WeaponGuesser() {
                 </thead>
                 <ListGuesses guesses={guesses} todaysEldendle={todaysEldendle} showDamage={showDamage} showScaling={showScaling} />
             </table>
-            <section>
+            <section className='hintSection'>
                 <h3>Hints</h3>
-                <label>Show damage type values</label>
                 <input type='checkbox' name='showValues' checked={showDamage} onChange={() => { setShowingDamage(showDamage => !showDamage) }} />
+                <label>Show damage type values</label>
                 <br />
-                <label>Show attribute scaling tier</label>
                 <input type='checkbox' name='showValues' checked={showScaling} onChange={() => { setShowingScaling(showScaling => !showScaling) }} />
+                <label>Show attribute scaling tier</label>
             </section>
         </main>
     )
