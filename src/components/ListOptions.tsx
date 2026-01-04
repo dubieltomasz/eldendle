@@ -6,12 +6,15 @@ interface Prop {
     sendGuess: (match: number) => void;
     showDamage: boolean;
     showScaling: boolean;
+    guesses: number[];
 };
 
-function ListOptions({ options, sendGuess, showDamage, showScaling }: Prop) {
+function ListOptions({ options, sendGuess, showDamage, showScaling, guesses }: Prop) {
     function onclickfunction(index: number) {
         sendGuess(index);
     }
+
+    options = options.filter(option => !guesses.includes(option));
 
     if (options.length == 0) {
         return (<span></span>);

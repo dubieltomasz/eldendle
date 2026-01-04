@@ -48,7 +48,7 @@ function WeaponGuesser() {
         <main>
             <section className='inputSection'>
                 <Input search={setOptions} />
-                <ListOptions options={options} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} />
+                <ListOptions options={options} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} guesses={guesses} />
             </section>
             <table>
                 <thead>
