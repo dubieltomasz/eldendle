@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -11,14 +11,14 @@ function App() {
   return (
     <>
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Nav />
         <Routes>
-          <Route path='/eldendle/' element={<WeaponGuesser />} />
-          <Route path='/eldendle/bossguesser' element={<BossGuesser />} />
-          <Route path='/eldendle/craftingguesser' element={<CraftingGuesser />} />
+          <Route path='/' element={<WeaponGuesser />} />
+          <Route path='/bossguesser' element={<BossGuesser />} />
+          <Route path='/craftingguesser' element={<CraftingGuesser />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </>
   );

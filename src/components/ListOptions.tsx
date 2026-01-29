@@ -9,7 +9,7 @@ interface Prop {
     guesses: number[];
 };
 
-function ListOptions({ options, sendGuess, showDamage, showScaling, guesses }: Prop) {
+function ListOptions({ options, sendGuess, showDamage, showScaling }: Prop) {
     function StatusEffect(value: number): string {
         switch (value) {
             case 0:

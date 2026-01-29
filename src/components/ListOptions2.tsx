@@ -13,7 +13,7 @@ function ListOptions2({ options, guesses, sendGuess }: Prop) {
             {
                 options
                     .filter((value) => !guesses.includes(value))
-                    .map((value, index) => (
+                    .map((value) => (
                         <div className='optionCard' onClick={() => sendGuess(value)}>{JSONarray.at(value)!!.name}</div>
                     ))
             }
