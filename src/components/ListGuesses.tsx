@@ -1,94 +1,56 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import JSONArray from '../../public/weaponData.json';
+import type { Record } from '../routes/WeaponGuesser';
 import './ListGuesses.css';
 
 interface Prop {
-    guesses: number[];
-    todaysEldendle: number;
+    guesses: Record[];
+    todaysEldendle: Record;
     showDamage: boolean;
     showScaling: boolean;
 };
 
-function showDifference(actual: number, expected: number): string {
-    return actual !== expected ? actual < expected ? '↑' : '↓' : '';
+function StatusEffect(value: number): string {
+    switch (value) {
+        case 0:
+            return 'None';
+        case 1:
+            return 'Cold';
+        case 2:
+            return 'Bloodloss';
+        case 3:
+            return 'Poison';
+        case 4:
+            return 'Scarlet Rot';
+        case 5:
+            return 'Sleep';
+        case 6:
+            return 'Madness';
+        default:
+            return 'Deathblight'
+    }
 }
 
-function showDifferenceScaling(actual: string, expected: string): string {
-    return actual !== expected ? expected !== '-' ? actual < expected ? '↓' : '↑' : '↓' : '';
+function showHint(actual: number, expected: number): string {
+    return actual !== expected ? actual < expected ? ' ↑' : ' ↓' : '';
 }
 
-function pickRightClassWithTypes(actual: number, expected: number): string {
-    let check1: number = 0, check2 = 0;
-
-    if(JSONArray.at(actual)!!.Phy !== '-') {
-        check1 |= 16;
-    }
-    if(JSONArray.at(actual)!!.Mag !== '-') {
-        check1 |= 8;
-    }
-    if(JSONArray.at(actual)!!.Fir !== '-') {
-        check1 |= 4;
-    }
-    if(JSONArray.at(actual)!!.Lit !== '-') {
-        check1 |= 2;
-    }
-    if(JSONArray.at(actual)!!.Hol !== '-') {
-        check1 |= 1;
-    }
-    if(JSONArray.at(expected)!!.Phy !== '-') {
-        check2 |= 16;
-    }
-    if(JSONArray.at(expected)!!.Mag !== '-') {
-        check2 |= 8;
-    }
-    if(JSONArray.at(expected)!!.Fir !== '-') {
-        check2 |= 4;
-    }
-    if(JSONArray.at(expected)!!.Lit !== '-') {
-        check2 |= 2;
-    }
-    if(JSONArray.at(expected)!!.Hol !== '-') {
-        check2 |= 1;
-    }
-
-    return check1 === check2 ? 'good' : check1 & check2 ? 'wrong' : 'veryWrong';
+function match(actual: number, expected: number): string {
+    return actual === expected ? 'good' : 'veryWrong';
 }
 
-function pickRightClassWithScaling(actual: number, expected: number): string {
-    let check1: number = 0, check2 = 0;
+function matchMultiple(values: number[]): string {
+    let good: boolean = false;
+    let bad: boolean = false;
 
-    if(JSONArray.at(actual)!!.Str !== '-') {
-        check1 |= 16;
-    }
-    if(JSONArray.at(actual)!!.Dex !== '-') {
-        check1 |= 8;
-    }
-    if(JSONArray.at(actual)!!.Int !== '-') {
-        check1 |= 4;
-    }
-    if(JSONArray.at(actual)!!.Fai !== '-') {
-        check1 |= 2;
-    }
-    if(JSONArray.at(actual)!!.Arc !== '-') {
-        check1 |= 1;
-    }
-    if(JSONArray.at(expected)!!.Str !== '-') {
-        check2 |= 16;
-    }
-    if(JSONArray.at(expected)!!.Dex !== '-') {
-        check2 |= 8;
-    }
-    if(JSONArray.at(expected)!!.Int !== '-') {
-        check2 |= 4;
-    }
-    if(JSONArray.at(expected)!!.Fai !== '-') {
-        check2 |= 2;
-    }
-    if(JSONArray.at(expected)!!.Arc !== '-') {
-        check2 |= 1;
+    for (let i = 0; i < values.length - 1; i += 2) {
+        if ((values[i] !== 0) === (values[i + 1] !== 0)) {
+            good = true;
+        } else {
+            bad = true;
+        }
     }
 
-    return check1 === check2 ? 'good' : check1 & check2 ? 'wrong' : 'veryWrong';
+    return good && !bad ? 'good' : good ? 'wrong' : 'veryWrong';
 }
 
 function ListGuesses({ guesses, todaysEldendle, showDamage, showScaling }: Prop) {
@@ -97,36 +59,48 @@ function ListGuesses({ guesses, todaysEldendle, showDamage, showScaling }: Prop)
             <AnimatePresence>
                 {[...guesses].reverse().map((guess, index) => (
                     <motion.tr
-                        initial={{opacity: 0.0, y: -10}}
-                        animate={{opacity: 1.0, y: 0}}
-                        transition={{duration: 0.5}}
-                        key={guesses.length - 1 - index}>
+                        initial={{ opacity: 0.0, y: -10 }}
+                        animate={{ opacity: 1.0, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        key={guesses.length - 1 - index}
+                    >
                         <td>Picture</td>
-                        <td className={guess === todaysEldendle ? 'good' : 'veryWrong'}>{JSONArray.at(guess)!!.Name}</td>
-                        <td className={JSONArray.at(guess)!!.Type === JSONArray.at(todaysEldendle)!!.Type ? 'good' : 'veryWrong'}>{JSONArray.at(guess)!!.Type}</td>
-                        <td className={pickRightClassWithTypes(guess, todaysEldendle)}>
-                            {JSONArray.at(guess)!!.Phy != '-' ? <p>Phy{showDamage ? ' ' + JSONArray.at(guess)!!.Phy + showDifference(Number.parseInt(JSONArray.at(guess)!!.Phy.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.Phy.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Mag != '-' ? <p>Mag{showDamage ? ' ' + JSONArray.at(guess)!!.Mag + showDifference(Number.parseInt(JSONArray.at(guess)!!.Mag.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.Mag.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Fir != '-' ? <p>Fir{showDamage ? ' ' + JSONArray.at(guess)!!.Fir + showDifference(Number.parseInt(JSONArray.at(guess)!!.Fir.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.Fir.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Lit != '-' ? <p>Lit{showDamage ? ' ' + JSONArray.at(guess)!!.Lit + showDifference(Number.parseInt(JSONArray.at(guess)!!.Lit.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.Lit.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Hol != '-' ? <p>Hol{showDamage ? ' ' + JSONArray.at(guess)!!.Hol + showDifference(Number.parseInt(JSONArray.at(guess)!!.Hol.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.Hol.toString())) : ''}</p> : ''}
+                        <td className={guess === todaysEldendle ? 'good' : 'veryWrong'}>
+                            {guess.name}
                         </td>
-                        <td className={JSONArray.at(guess)!!.Cri === JSONArray.at(todaysEldendle)!!.Cri ? 'good' : 'veryWrong'}>
-                            {JSONArray.at(guess)!!.Cri}
-                            {showDifference(JSONArray.at(guess)!!.Cri, JSONArray.at(todaysEldendle)!!.Cri)}
+                        <td className={guess.wepType === todaysEldendle.wepType ? 'good' : 'veryWrong'}>
+                            {guess.wepType}
                         </td>
-                        <td className={pickRightClassWithScaling(guess, todaysEldendle)}>
-                            {JSONArray.at(guess)!!.Str != '-' ? <p>Str{showScaling ? ' ' + JSONArray.at(guess)!!.Str + showDifferenceScaling(JSONArray.at(guess)!!.Str, JSONArray.at(todaysEldendle)!!.Str) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Dex != '-' ? <p>Dex{showScaling ? ' ' + JSONArray.at(guess)!!.Dex + showDifferenceScaling(JSONArray.at(guess)!!.Dex, JSONArray.at(todaysEldendle)!!.Dex) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Int != '-' ? <p>Int{showScaling ? ' ' + JSONArray.at(guess)!!.Int + showDifferenceScaling(JSONArray.at(guess)!!.Int, JSONArray.at(todaysEldendle)!!.Int) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Fai != '-' ? <p>Fai{showScaling ? ' ' + JSONArray.at(guess)!!.Fai + showDifferenceScaling(JSONArray.at(guess)!!.Fai, JSONArray.at(todaysEldendle)!!.Fai) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.Arc != '-' ? <p>Arc{showScaling ? ' ' + JSONArray.at(guess)!!.Arc + showDifferenceScaling(JSONArray.at(guess)!!.Arc, JSONArray.at(todaysEldendle)!!.Arc) : ''}</p> : ''}
+                        <td className={matchMultiple([guess.attackPhy, todaysEldendle.attackPhy, guess.attackMag, todaysEldendle.attackMag, guess.attackFir, todaysEldendle.attackFir, guess.attackLig, todaysEldendle.attackLig, guess.attackHol, todaysEldendle.attackHol])}>
+                            {guess.attackPhy ? <p>Phy{showDamage ? ' ' + guess.attackPhy + showHint(guess.attackPhy, todaysEldendle.attackPhy) : ''}</p> : ''}
+                            {guess.attackMag ? <p>Mag{showDamage ? ' ' + guess.attackMag + showHint(guess.attackMag, todaysEldendle.attackMag) : ''}</p> : ''}
+                            {guess.attackFir ? <p>Fir{showDamage ? ' ' + guess.attackFir + showHint(guess.attackFir, todaysEldendle.attackFir) : ''}</p> : ''}
+                            {guess.attackLig ? <p>Lig{showDamage ? ' ' + guess.attackLig + showHint(guess.attackLig, todaysEldendle.attackLig) : ''}</p> : ''}
+                            {guess.attackHol ? <p>Hol{showDamage ? ' ' + guess.attackHol + showHint(guess.attackHol, todaysEldendle.attackHol) : ''}</p> : ''}
                         </td>
-                        <td className={JSONArray.at(guess)!!.Wgt === JSONArray.at(todaysEldendle)!!.Wgt ? 'good' : 'veryWrong'}>
-                            {JSONArray.at(guess)!!.Wgt}
-                            {showDifference(JSONArray.at(guess)!!.Wgt, JSONArray.at(todaysEldendle)!!.Wgt)}
+                        <td className={matchMultiple([guess.guardPhy, todaysEldendle.guardPhy, guess.guardMag, todaysEldendle.guardMag, guess.guardFire, todaysEldendle.guardFire, guess.guardLig, todaysEldendle.guardLig, guess.guardHol, todaysEldendle.guardHol])}>
+                            {guess.guardPhy ? <p>Phy {guess.guardPhy + showHint(guess.guardPhy, todaysEldendle.guardPhy)}</p> : ''}
+                            {guess.guardMag ? <p>Mag {guess.guardMag + showHint(guess.guardMag, todaysEldendle.guardMag)}</p> : ''}
+                            {guess.guardFire ? <p>Fir {guess.guardFire + showHint(guess.guardFire, todaysEldendle.guardFire)}</p> : ''}
+                            {guess.guardLig ? <p>Lig {guess.guardLig + showHint(guess.guardLig, todaysEldendle.guardLig)}</p> : ''}
+                            {guess.guardHol ? <p>Hol {guess.guardHol + showHint(guess.guardHol, todaysEldendle.guardHol)}</p> : ''}
                         </td>
-                        <td className={JSONArray.at(guess)!!.Upgrade === JSONArray.at(todaysEldendle)!!.Upgrade ? 'good' : 'veryWrong'}>{JSONArray.at(guess)!!.Upgrade}</td>
+                        <td className={matchMultiple([guess.reqStr, todaysEldendle.reqStr, guess.reqDex, todaysEldendle.reqDex, guess.reqInt, todaysEldendle.reqInt, guess.reqFai, todaysEldendle.reqFai, guess.reqArc, todaysEldendle.reqArc])}>
+                            {guess.reqStr ? <p>Str{showScaling ? ' ' + guess.reqStr + showHint(guess.reqStr, todaysEldendle.reqStr) : ''}</p> : ''}
+                            {guess.reqDex ? <p>Dex{showScaling ? ' ' + guess.reqDex + showHint(guess.reqDex, todaysEldendle.reqDex) : ''}</p> : ''}
+                            {guess.reqInt ? <p>Int{showScaling ? ' ' + guess.reqInt + showHint(guess.reqInt, todaysEldendle.reqInt) : ''}</p> : ''}
+                            {guess.reqFai ? <p>Fai{showScaling ? ' ' + guess.reqFai + showHint(guess.reqFai, todaysEldendle.reqFai) : ''}</p> : ''}
+                            {guess.reqArc ? <p>Arc{showScaling ? ' ' + guess.reqArc + showHint(guess.reqArc, todaysEldendle.reqArc) : ''}</p> : ''}
+                        </td>
+                        <td className={match(guess.spEff, todaysEldendle.spEff)}>
+                            {StatusEffect(guess.spEff)}
+                        </td>
+                        <td className={match(guess.weight, todaysEldendle.weight)}>
+                            {guess.weight + showHint(guess.weight, todaysEldendle.weight)}
+                        </td>
+                        <td className={match(guess.upgradeStone, todaysEldendle.upgradeStone)}>
+                            {guess.upgradeStone ? 'Smithing Stone' : 'Somber Smithing Stone'}
+                        </td>
                     </motion.tr>
                 ))}
             </AnimatePresence>

@@ -5,6 +5,31 @@ import ListGuesses from '../components/ListGuesses.tsx';
 import JSONArray from '../../public/weaponData.json';
 import '../components/WeaponGuesser.css';
 
+export interface Record {
+    name: string;
+    wepType: number;
+    weight: number;
+    guardPhy: number;
+    guardMag: number;
+    guardFire: number;
+    guardLig: number;
+    guardHol: number;
+    guardSta: number;
+    attackPhy: number;
+    attackMag: number;
+    attackFir: number;
+    attackLig: number;
+    attackHol: number;
+    attackSta: number;
+    reqStr: number;
+    reqDex: number;
+    reqInt: number;
+    reqFai: number;
+    reqArc: number;
+    upgradeStone: number;
+    spEff: number;
+};
+
 function WeaponGuesser() {
     //const [todaysEldendle, setTodaysEldendle] = useState<number>(new Date().getDate() % JSONArray.length);
     const todaysEldendle: number = new Date().getDate() % JSONArray.length;
@@ -22,17 +47,29 @@ function WeaponGuesser() {
     const [showDamage, setShowingDamage] = useState<boolean>(false);
     const [showScaling, setShowingScaling] = useState<boolean>(false);
 
-    function addGuess(guess: number) {
+    function addGuess(guess: Record) {
         setGuesses(prevGuesses => {
-            const newGuesses = [...prevGuesses, guess];
+            const newGuesses = [...prevGuesses, JSONArray.indexOf(guess)];
             localStorage.setItem('guesses', JSON.stringify(newGuesses));
             setOptions([]);
             return newGuesses;
         });
 
-        if (guess === todaysEldendle) {
+        if (guesses.at(guesses.length - 1) === todaysEldendle) {
             alert('You won!!!');
         }
+    }
+
+    function search(inputValue: string) {
+        const matches: number[] = [];
+
+        JSONArray.forEach((record, index: number) => {
+            if (record.name.toLocaleLowerCase().match(inputValue)) {
+                matches.push(index);
+            }
+        })
+
+        setOptions(matches);
     }
 
     const currentDate: string = new Date().toISOString().split('T')[0];
@@ -47,8 +84,8 @@ function WeaponGuesser() {
     return (
         <main>
             <section className='inputSection'>
-                <Input search={setOptions} />
-                <ListOptions options={options} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} guesses={guesses} />
+                <Input search={search} />
+                <ListOptions options={JSONArray.filter((_, index) => options.includes(index))} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} guesses={guesses} />
             </section>
             <table>
                 <thead>
@@ -56,13 +93,14 @@ function WeaponGuesser() {
                         <th colSpan={2}>Weapon</th>
                         <th>Type</th>
                         <th>Damage Type</th>
-                        <th>Critical Boost</th>
-                        <th>Scaling</th>
+                        <th>Damage Negation</th>
+                        <th>Required Stats</th>
+                        <th>Status Effect</th>
                         <th>Weight</th>
                         <th>Upgrade Material</th>
                     </tr>
                 </thead>
-                <ListGuesses guesses={guesses} todaysEldendle={todaysEldendle} showDamage={showDamage} showScaling={showScaling} />
+                <ListGuesses guesses={guesses.map(i => JSONArray.at(i)!)} todaysEldendle={JSONArray.at(todaysEldendle)!} showDamage={showDamage} showScaling={showScaling} />
             </table>
             <section className='hintSection'>
                 <h3>Hints</h3>

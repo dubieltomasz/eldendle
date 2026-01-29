@@ -1,24 +1,18 @@
-import JSONArray from '../../public/weaponData.json';
 import './Input.css';
 
 interface Prop {
-    search: (match: number[]) => void;
+    search: (match: string) => void;
 };
 
 function input({ search }: Prop) {
-    function onChangeFunction(inputValue: string) {
-        const expression: string = inputValue.trim().toLowerCase();
-        const matches: number[] = [];
+    function onChange(input: string) {
+        let inputValue: string = input.trim().toLowerCase();
 
-        if (expression !== '') {
-            JSONArray.forEach((record, index: number) => {
-                if (record.Name.toLocaleLowerCase().match(expression)) {
-                    matches.push(index);
-                }
-            })
+        if (inputValue === '') {
+            inputValue = 'XXX';
         }
 
-        search(matches);
+        search(inputValue);
     }
 
     return (
@@ -26,7 +20,7 @@ function input({ search }: Prop) {
             type='text'
             name='inputName'
             onChange={that => {
-                onChangeFunction(that.target.value);
+                onChange(that.target.value);
             }}
         />
     );
