@@ -1,0 +1,2956 @@
+[
+  {
+    "name": "Bewitching Branch",
+    "cookbook": "Fevor's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Sacramental Bud",
+        "quantity": 1
+      },
+      {
+        "material": "Miquella's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Furlcalling Finger Remedy",
+    "cookbook": "Default",
+    "ingredients": [
+      {
+        "material": "Erdleaf Flower",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Fire Pot",
+    "cookbook": "Default",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Redmane Fire Pot",
+    "cookbook": "Armorer's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      },
+      {
+        "material": "Old Fang",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Giantsflame Fire Pot",
+    "cookbook": "Armorer's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Fire Blossom",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Frozen Raisin",
+    "cookbook": "Nomadic Warrior's Cookbook [23]",
+    "ingredients": [
+      {
+        "material": "Rimed Rowa",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightning Pot",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Ancient Dragonbolt Pot",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      },
+      {
+        "material": "Gravel Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fetid Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Gold-Tinged Excrement",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rowa Raisin",
+    "cookbook": "Default",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Swarm Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [24]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Blood-Tainted Excrement",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sweet Raisin",
+    "cookbook": "Nomadic Warrior's Cookbook [19]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Holy Water Pot",
+    "cookbook": "Missionary's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Tarnished Golden Sunflower",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Freezing Pot",
+    "cookbook": "Glintstone Craftsman's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Rimed Crystal Bud",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Sacred Order Pot",
+    "cookbook": "Missionary's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 1
+      },
+      {
+        "material": "Golden Centipede",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Oil Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [17]",
+    "ingredients": [
+      {
+        "material": "Melted Mushroom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Soap",
+    "cookbook": "Nomadic Warrior's Cookbook [17]",
+    "ingredients": [
+      {
+        "material": "Melted Mushroom",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Poison Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [14]",
+    "ingredients": [
+      {
+        "material": "Toxic Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rainbow Stone",
+    "cookbook": "Default",
+    "ingredients": [
+      {
+        "material": "Ruin Fragment",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Magic Pot",
+    "cookbook": "Glintstone Craftsman's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Alluring Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [21]",
+    "ingredients": [
+      {
+        "material": "Albinauric Bloodclot",
+        "quantity": 1
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "Volcano Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [20]",
+    "ingredients": [
+      {
+        "material": "Volcanic Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Beastlure Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Beast Blood",
+        "quantity": 1
+      },
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Spirit Raisin",
+    "cookbook": "Forager Brood Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Roped Fire Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fire Coil",
+    "cookbook": "Fire Knight's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Ember of Messmer",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Roped Lightning Pot",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Dart",
+    "cookbook": "Default",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Roped Fetid Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Gold-Tinged Excrement",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Roped Poison Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [14]",
+    "ingredients": [
+      {
+        "material": "Toxic Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Bolt",
+    "cookbook": "Nomadic Warrior's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Roped Oil Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [17]",
+    "ingredients": [
+      {
+        "material": "Melted Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Great Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Roped Magic Pot",
+    "cookbook": "Glintstone Craftsman's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Ballista Bolt",
+    "cookbook": "Nomadic Warrior's Cookbook [13]",
+    "ingredients": [
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Roped Fly Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [24]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Blood-Tainted Excrement",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Magic Pot",
+    "cookbook": "Greater Potentate's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Glintslab Firefly",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Roped Volcano Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [20]",
+    "ingredients": [
+      {
+        "material": "Volcanic Stone",
+        "quantity": 2
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Royal Magic Grease",
+    "cookbook": "Loyal Knight's Cookbook",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Glintslab Firefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Roped Holy Water Pot",
+    "cookbook": "Missionary's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Tarnished Golden Sunflower",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Glinting Nail",
+    "cookbook": "Finger-Weaver's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Nailstone",
+        "quantity": 3
+      },
+      {
+        "material": "Pearlescent Scale",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Oil Pot",
+    "cookbook": "Greater Potentate's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Dewgem",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Albinauric Pot",
+    "cookbook": "Glintstone Craftsman's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Albinauric Bloodclot",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Fire Pot",
+    "cookbook": "Greater Potentate's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Black Pyrefly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Cursed-Blood Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [12]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Beast Blood",
+        "quantity": 1
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Messmerfire Grease",
+    "cookbook": "Fire Knight's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Black Pyrefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sleep Pot",
+    "cookbook": "Fevor's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Lightning Pot",
+    "cookbook": "Greater Potentate's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Yellow Fulgurbloom",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Rancor Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [9]",
+    "ingredients": [
+      {
+        "material": "Grave Violet",
+        "quantity": 2
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dragonbolt Grease",
+    "cookbook": "Ancient Dragon Knight's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Yellow Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Golden Grease",
+    "cookbook": "Battlefield Priest's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Shadow Sunflower",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Academy Magic Pot",
+    "cookbook": "Glintstone Craftsman's Cookbook [8]",
+    "ingredients": [
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      },
+      {
+        "material": "Old Fang",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Golden Vow",
+    "cookbook": "Battlefield Priest's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Blessed Bone Shard",
+        "quantity": 1
+      },
+      {
+        "material": "Shadow Sunflower",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Rot Pot",
+    "cookbook": "Nomadic Warrior's Cookbook [22]",
+    "ingredients": [
+      {
+        "material": "Toxic Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Faded Erdleaf Flower",
+        "quantity": 2
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poison Grease",
+    "cookbook": "Nomadic Warrior's Cookbook [8]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poisonbone Dart",
+    "cookbook": "Nomadic Warrior's Cookbook [14]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poisonbone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Neutralizing Boluses",
+    "cookbook": "Armorer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Herba",
+        "quantity": 1
+      },
+      {
+        "material": "Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Great Dragonfly Head",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poisonbone Bolt",
+    "cookbook": "Nomadic Warrior's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Stanching Boluses",
+    "cookbook": "Nomadic Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Herba",
+        "quantity": 1
+      },
+      {
+        "material": "Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Land Octopus Ovary",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Holy Grease",
+    "cookbook": "Missionary's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Thawfrost Boluses",
+    "cookbook": "Nomadic Warrior's Cookbook [16]",
+    "ingredients": [
+      {
+        "material": "Herba",
+        "quantity": 1
+      },
+      {
+        "material": "Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Crab Eggs",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Haligbone Arrow",
+    "cookbook": "Missionary's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Stimulating Boluses",
+    "cookbook": "Nomadic Warrior's Cookbook [16]",
+    "ingredients": [
+      {
+        "material": "Herba",
+        "quantity": 1
+      },
+      {
+        "material": "Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Slumbering Egg",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Haligbone Bolt",
+    "cookbook": "Missionary's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Preserving Boluses",
+    "cookbook": "Armorer's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Dewkissed Herba",
+        "quantity": 2
+      },
+      {
+        "material": "Crystal Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Sacramental Bud",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rejuvenating Boluses",
+    "cookbook": "Missionary's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Dewkissed Herba",
+        "quantity": 2
+      },
+      {
+        "material": "Crystal Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Golden Centipede",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightning Grease",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Clarifying Boluses",
+    "cookbook": "Frenzied's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Dewkissed Herba",
+        "quantity": 2
+      },
+      {
+        "material": "Crystal Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Eye of Yelough",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightningbone Arrow",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Pickled Turtle Neck",
+    "cookbook": "Nomadic Warrior's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Turtle Neck Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Herba",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightningbone Bolt",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Immunizing Cured Meat",
+    "cookbook": "Armorer's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Sliver of Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Great Dragonfly Head",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Invigorating Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 3
+      },
+      {
+        "material": "Sliver of Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Crab Eggs",
+        "quantity": 1
+      },
+      {
+        "material": "Land Octopus Ovary",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Glowstone",
+    "cookbook": "Nomadic Warrior's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Ruin Fragment",
+        "quantity": 1
+      },
+      {
+        "material": "Dewkissed Herba",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Clarifying Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [23]",
+    "ingredients": [
+      {
+        "material": "Rimed Rowa",
+        "quantity": 5
+      },
+      {
+        "material": "Sliver of Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Slumbering Egg",
+        "quantity": 1
+      },
+      {
+        "material": "Eye of Yelough",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Blood Grease",
+    "cookbook": "Nomadic Warrior's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dappled Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [18]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 5
+      },
+      {
+        "material": "Sliver of Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Budding Horn",
+        "quantity": 1
+      },
+      {
+        "material": "Nascent Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bloodbone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Spellproof Dried Liver",
+    "cookbook": "Nomadic Warrior's Cookbook [11]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Bloodbone Bolt",
+    "cookbook": "Nomadic Warrior's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fireproof Dried Liver",
+    "cookbook": "Armorer's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Magic Grease",
+    "cookbook": "Glintstone Craftsman's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Crystal Bud",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightningproof Dried Liver",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Freezing Grease",
+    "cookbook": "Glintstone Craftsman's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Rimed Crystal Bud",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Holyproof Dried Liver",
+    "cookbook": "Missionary's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 5
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Coldbone Arrow",
+    "cookbook": "Glintstone Craftsman's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Rimed Crystal Bud",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Silver-Pickled Fowl Foot",
+    "cookbook": "Missionary's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Four-Toed Fowl Foot",
+        "quantity": 1
+      },
+      {
+        "material": "Silver Firefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Coldbone Bolt",
+    "cookbook": "Glintstone Craftsman's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Rimed Crystal Bud",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Gold-Pickled Fowl Foot",
+    "cookbook": "Missionary's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Four-Toed Fowl Foot",
+        "quantity": 1
+      },
+      {
+        "material": "Gold Firefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Crystal Dart",
+    "cookbook": "Nomadic Warrior's Cookbook [11]",
+    "ingredients": [
+      {
+        "material": "Cracked Crystal",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Exalted Flesh",
+    "cookbook": "Armorer's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 5
+      },
+      {
+        "material": "Lump of Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 1
+      },
+      {
+        "material": "Arteria Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Cuckoo Glintstone",
+    "cookbook": "Glintstone Craftsman's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Crystal Bud",
+        "quantity": 1
+      },
+      {
+        "material": "Cracked Crystal",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Immunizing White Cured Meat",
+    "cookbook": "Armorer's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Strip of White Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Great Dragonfly Head",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Shattershard Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [11]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Cracked Crystal",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Invigorating White Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 3
+      },
+      {
+        "material": "Strip of White Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Crab Eggs",
+        "quantity": 1
+      },
+      {
+        "material": "Land Octopus Ovary",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rainbow Stone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Ruin Fragment",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Clarifying White Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [23]",
+    "ingredients": [
+      {
+        "material": "Rimed Rowa",
+        "quantity": 5
+      },
+      {
+        "material": "Strip of White Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Slumbering Egg",
+        "quantity": 1
+      },
+      {
+        "material": "Eye of Yelough",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Soft Cotton",
+    "cookbook": "Nomadic Warrior's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Rowa Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dappled White Cured Meat",
+    "cookbook": "Nomadic Warrior's Cookbook [18]",
+    "ingredients": [
+      {
+        "material": "Golden Rowa",
+        "quantity": 5
+      },
+      {
+        "material": "Strip of White Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Budding Horn",
+        "quantity": 1
+      },
+      {
+        "material": "Nascent Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fire Grease",
+    "cookbook": "Armorer's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Firebone Arrow",
+    "cookbook": "Armorer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Firebone Bolt",
+    "cookbook": "Armorer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Magicbone Arrow",
+    "cookbook": "Glintstone Craftsman's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Magicbone Bolt",
+    "cookbook": "Glintstone Craftsman's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Soporific Grease",
+    "cookbook": "Fevor's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Poison Pot",
+    "cookbook": "Greater Potentate's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Fly Mold",
+        "quantity": 2
+      },
+      {
+        "material": "Toxic Mossling",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Hefty Rot Pot",
+    "cookbook": "Greater Potentate's Cookbook [9]",
+    "ingredients": [
+      {
+        "material": "Fly Mold",
+        "quantity": 2
+      },
+      {
+        "material": "Scarlet Bud",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Rot Grease",
+    "cookbook": "Nomadic Warrior's Cookbook [22]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Fly Pot",
+    "cookbook": "Greater Potentate's Cookbook [10]",
+    "ingredients": [
+      {
+        "material": "Fly Mold",
+        "quantity": 2
+      },
+      {
+        "material": "Sanguine Amaryllis",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Fire Grease",
+    "cookbook": "Armorer's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Freezing Pot",
+    "cookbook": "Greater Potentate's Cookbook [11]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Frozen Maggot",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Lightning Grease",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Eternal Sleep Pot",
+    "cookbook": "St. Trina Disciple's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Deep-Purple Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Magic Grease",
+    "cookbook": "Glintstone Craftsman's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Crystal Bud",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Eternal Sleep Grease",
+    "cookbook": "St. Trina Disciple's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Deep-Purple Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Holy Grease",
+    "cookbook": "Missionary's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Frenzied Flame Pot",
+    "cookbook": "Greater Potentate's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Winter-Lantern Fly",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Blood Grease",
+    "cookbook": "Nomadic Warrior's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Frenzied Flame Pot",
+    "cookbook": "Mad Craftsman's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Winter-Lantern Fly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Soporific Grease",
+    "cookbook": "Fevor's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Surging Frenzied Flame",
+    "cookbook": "Mad Craftsman's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Spiritgrave Stone",
+        "quantity": 1
+      },
+      {
+        "material": "Swollen Grape",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Poison Grease",
+    "cookbook": "Nomadeic Warrior's Cookbook [8]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Fetid Pot",
+    "cookbook": "Greater Potentate's Cookbook [8]",
+    "ingredients": [
+      {
+        "material": "Fly Mold",
+        "quantity": 2
+      },
+      {
+        "material": "Horn-Strewn Excrement",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Rot Grease",
+    "cookbook": "Nomadic Warrior's Cookbook [22]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Volcano Pot",
+    "cookbook": "Greater Potentate's Cookbook [13]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Gas Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Shield Grease",
+    "cookbook": "Glintstone Craftsman's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Silver Tear Husk",
+        "quantity": 1
+      },
+      {
+        "material": "Crystal Bud",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Rancor Pot",
+    "cookbook": "Greater Potentate's Cookbook [14]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Ghostflame Bloom",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Polter Stone",
+    "cookbook": "Grave Keeper's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Spiritgrave Stone",
+        "quantity": 1
+      },
+      {
+        "material": "Grave Cricket",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Hefty Rock Pot",
+    "cookbook": "Greater Potentate's Cookbook [12]",
+    "ingredients": [
+      {
+        "material": "Roundrock",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Festive Grease",
+    "cookbook": "Battlefield Priest's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Blessed Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Red Lightning Pot",
+    "cookbook": "Greater Potentate's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 3
+      },
+      {
+        "material": "Red Fulgurbloom",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Red Lightning Pot",
+    "cookbook": "Ancient Dragon Knight's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Red Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Grace Mimic",
+    "cookbook": "Missionary's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Erdleaf Flower",
+        "quantity": 1
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dragon Communion Grease",
+    "cookbook": "Igon's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Sharp Gravel Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bone Great Arrow (Fletched)",
+    "cookbook": "Nomadic Warrior's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Stormwing Bone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [10]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Stormhawk Feather",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Warming Stone",
+    "cookbook": "Nomadic Warrior's Cookbook [19]",
+    "ingredients": [
+      {
+        "material": "Erdleaf Flower",
+        "quantity": 1
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      },
+      {
+        "material": "Sanctuary Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Frenzyflame Stone",
+    "cookbook": "Frenzied’s Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Yellow Ember",
+        "quantity": 1
+      },
+      {
+        "material": "Sanctuary Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Scriptstone",
+    "cookbook": "Missionary's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Ruin Fragment",
+        "quantity": 1
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Spark Aromatic",
+    "cookbook": "Perfumer's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 1
+      },
+      {
+        "material": "",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Uplifting Aromatic",
+    "cookbook": "Perfumer's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 1
+      },
+      {
+        "material": "Budding Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Silver Tear Husk",
+        "quantity": 1
+      },
+      {
+        "material": "Arteria Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Hefty Furance Pot",
+    "cookbook": "Greater Potentate's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Redflesh Mushroom",
+        "quantity": 2
+      },
+      {
+        "material": "Ember of Messmer",
+        "quantity": 2
+      },
+      {
+        "material": "Furnace Visage",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Ironjar Aromatic",
+    "cookbook": "Perfumer's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 2
+      },
+      {
+        "material": "Budding Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Living Jar Shard",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "Bloodboil Aromatic",
+    "cookbook": "Perfumer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 2
+      },
+      {
+        "material": "Budding Cave Moss",
+        "quantity": 1
+      },
+      {
+        "material": "Land Octopus Ovary",
+        "quantity": 1
+      },
+      {
+        "material": "Arteria Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poison Spraymist",
+    "cookbook": "Perfumer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 1
+      },
+      {
+        "material": "",
+        "quantity": 1
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Acid Spraymist",
+    "cookbook": "Perfumer's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Altus Bloom",
+        "quantity": 1
+      },
+      {
+        "material": "",
+        "quantity": 1
+      },
+      {
+        "material": "Formic Rock",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "Bone Arrow (Fletched)",
+    "cookbook": "Nomadic Warrior's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Firebone Arrow (Fletched)",
+    "cookbook": "Armorer's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Smoldering Butterfly",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Poisonbone Arrow (Fletched)",
+    "cookbook": "Nomadic Warrior's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Poisonbloom",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sleepbone Arrow (Fletched)",
+    "cookbook": "Fevor's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sleepbone Arrow",
+    "cookbook": "Fevor's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sunwarmth Stone",
+    "cookbook": "Battlefield Priest's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Spiritgrave Stone",
+        "quantity": 1
+      },
+      {
+        "material": "Black Pyrefly",
+        "quantity": 1
+      },
+      {
+        "material": "Blessed Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightningbone Arrow (Fletched)",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Fulgurbloom",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Magicbone Arrow (Fletched)",
+    "cookbook": "Glintstone Craftsman's Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Glintstone Firefly",
+        "quantity": 2
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Royal Magic Grease",
+    "cookbook": "Loyal Knight's Cookbook",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Glintslab Firefly",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Haligbone Arrow (Fletched)",
+    "cookbook": "Missionary's Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Golden Sunflower",
+        "quantity": 2
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Messmerfire Grease",
+    "cookbook": "Fire Knight's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Black Pyrefly",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Dragonbolt Grease",
+    "cookbook": "Ancient Dragon Knight's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Yellow Fulgurbloom",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Bloodbone Arrow (Fletched)",
+    "cookbook": "Nomadic Warrior's Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Bloodrose",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Golden Grease",
+    "cookbook": "Battlefield Priest's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Shadow Sunflower",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Coldbone Arrow (Fletched)",
+    "cookbook": "Glintstone Craftsman's Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Rimed Crystal Bud",
+        "quantity": 3
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rotbone Arrow (Fletched)",
+    "cookbook": "Nomadic Warrior's Cookbook [15]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rotbone Arrow",
+    "cookbook": "Nomadic Warrior's Cookbook [15]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Drawstring Eternal Sleep Grease",
+    "cookbook": "St. Trina Disciple's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Knot Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Deep-Purple Lily",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Roped Frenzied Flame Pot",
+    "cookbook": "Mad Craftsman's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Whiteflesh Mushroom",
+        "quantity": 1
+      },
+      {
+        "material": "Winter-Lantern Fly",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dragon Communion Harpoon",
+    "cookbook": "Igon's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Sharp Gravel Stone",
+        "quantity": 2
+      },
+      {
+        "material": "Hefty Beast Bone",
+        "quantity": 1
+      },
+      {
+        "material": "String",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Rotbone Bolt",
+    "cookbook": "Nomadic Warrior's Cookbook [15]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Aeonian Butterfly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Sleepbone Bolt",
+    "cookbook": " Fevor's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Trina's Lily",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lulling Branch",
+    "cookbook": "St. Trina Disciple's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Dewgem",
+        "quantity": 1
+      },
+      {
+        "material": "Nectarblood Burgeon",
+        "quantity": 1
+      },
+      {
+        "material": "Beast Horn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Charming Branch",
+    "cookbook": "Forager Brood Cookbook [7]",
+    "ingredients": [
+      {
+        "material": "Dewgem",
+        "quantity": 1
+      },
+      {
+        "material": "Empyrean-Blood Burgeon",
+        "quantity": 1
+      },
+      {
+        "material": "Beast Horn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fire Spritestone",
+    "cookbook": "Antiquity Scholar's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Rauh Burrow",
+        "quantity": 2
+      },
+      {
+        "material": "Ember of Messmer",
+        "quantity": 1
+      },
+      {
+        "material": "Beast Horn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Spritestone",
+    "cookbook": "Antiquity Scholar's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Rauh Burrow",
+        "quantity": 1
+      },
+      {
+        "material": "Spirit Calculus",
+        "quantity": 1
+      },
+      {
+        "material": "Beast Horn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Call of Tibia",
+    "cookbook": "Tibia's Cookbook",
+    "ingredients": [
+      {
+        "material": "Grave Keeper's Brainpan",
+        "quantity": 1
+      },
+      {
+        "material": "Grave Cricket",
+        "quantity": 3
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Piquebone Arrow",
+    "cookbook": "Grave Keeper's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Congealed Putrescence",
+        "quantity": 2
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Piquebone Bolt",
+    "cookbook": "Grave Keeper's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 2
+      },
+      {
+        "material": "Congealed Putrescence",
+        "quantity": 2
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Spellproof Pickled Liver",
+    "cookbook": "Forager Brood Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Glintslab Firefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Opaline Pickled Liver",
+    "cookbook": "Forager Brood Cookbook [5]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Pearlescent Scale",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Well-Pickled Turtle Neck",
+    "cookbook": "Forager Brood Cookbook [6]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Turtle Neck Meat",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Dewgem",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dragon Communion Flesh",
+    "cookbook": "Igon's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 5
+      },
+      {
+        "material": "Lump of Flesh",
+        "quantity": 1
+      },
+      {
+        "material": "Sharp Gravel Stone",
+        "quantity": 1
+      },
+      {
+        "material": "Dragon's Calorbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fireproof Pickled Liver",
+    "cookbook": "Forager Brood Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Black Pyrefly",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fingerprint Nostrum",
+    "cookbook": "Finger-Weaver's Cookbook [2]",
+    "ingredients": [
+      {
+        "material": "Dewgem",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Horn",
+        "quantity": 1
+      },
+      {
+        "material": "Pearlescent Scale",
+        "quantity": 1
+      },
+      {
+        "material": "Finger Mimic",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lightningproof Pickled Liver",
+    "cookbook": "Forager Brood Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Yellow Fulgurbloom",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Holyproof Pickled Liver",
+    "cookbook": "Forager Brood Cookbook [4]",
+    "ingredients": [
+      {
+        "material": "Rada Fruit",
+        "quantity": 3
+      },
+      {
+        "material": "Beast Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Scorpion Liver",
+        "quantity": 1
+      },
+      {
+        "material": "Shadow Sunflower",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Piquebone Arrow (Fletched)",
+    "cookbook": "Grave Keeper's Cookbook [1]",
+    "ingredients": [
+      {
+        "material": "Thin Beast Bones",
+        "quantity": 3
+      },
+      {
+        "material": "Congealed Putrescence",
+        "quantity": 2
+      },
+      {
+        "material": "Human Bone Shard",
+        "quantity": 1
+      },
+      {
+        "material": "Flight Pinion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dragonwound Grease",
+    "cookbook": "Ancient Dragon Apostle's Cookbook [3]",
+    "ingredients": [
+      {
+        "material": "Root Resin",
+        "quantity": 1
+      },
+      {
+        "material": "Beast Blood",
+        "quantity": 1
+      },
+      {
+        "material": "Gravel Stone",
+        "quantity": 1
+      }
+    ]
+  }
+]
