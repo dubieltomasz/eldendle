@@ -1,5 +1,5 @@
 import JSONarray from '../../public/craftingData.json';
-import './ListGuesses2.css';
+import '../styles/ListGuesses2.css';
 
 interface Prop {
     guesses: number[];

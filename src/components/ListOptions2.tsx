@@ -1,5 +1,5 @@
 import JSONarray from '../../public/craftingData.json';
-import './ListOptions2.css';
+import '../styles/ListOptions2.css';
 
 interface Prop {
     options: number[];

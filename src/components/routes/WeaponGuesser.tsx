@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import Input from '../components/Input.tsx';
-import ListOptions from '../components/ListOptions.tsx';
-import ListGuesses from '../components/ListGuesses.tsx';
-import JSONArray from '../../public/weaponData.json';
-import '../components/WeaponGuesser.css';
+import Input from '../Input.tsx';
+import ListOptions from '../ListOptions.tsx';
+import ListGuesses from '../ListGuesses.tsx';
+import JSONArray from '../../../public/weaponData.json';
 
 export interface Record {
     name: string;
@@ -38,13 +37,22 @@ function WeaponGuesser() {
         localStorage.getItem('lastGuessDate') ? localStorage.getItem('lastGuessDate')!! : ''
     );
 
-    const [options, setOptions] = useState<number[]>([]);
+    const currentDate: string = new Date().toISOString().split('T')[0];
 
+    const [options, setOptions] = useState<number[]>([]);
     const [guesses, setGuesses] = useState<number[]>(
         localStorage.getItem('guesses') ? JSON.parse(localStorage.getItem('guesses')!!) : []
     );
 
+    if (lastGuessDate === '' || lastGuessDate < currentDate) {
+        localStorage.setItem('lastGuessDate', currentDate);
+        setLastGuessDate(currentDate);
+        localStorage.setItem('guesses', '[]');
+        setGuesses([]);
+    }
+
     const [showDamage, setShowingDamage] = useState<boolean>(false);
+    const [showDamageNegation, setShowingDamageNegation] = useState<boolean>(false);
     const [showScaling, setShowingScaling] = useState<boolean>(false);
 
     function addGuess(guess: Record) {
@@ -55,10 +63,10 @@ function WeaponGuesser() {
             return newGuesses;
         });
 
-        if (guesses.at(guesses.length - 1) === todaysEldendle) {
+        if (JSONArray.indexOf(guess) === todaysEldendle) {
             alert('You won!!!');
         }
-    }
+    };
 
     function search(inputValue: string) {
         const matches: number[] = [];
@@ -70,22 +78,13 @@ function WeaponGuesser() {
         })
 
         setOptions(matches);
-    }
-
-    const currentDate: string = new Date().toISOString().split('T')[0];
-
-    if (lastGuessDate === '' || lastGuessDate < currentDate) {
-        localStorage.setItem('lastGuessDate', currentDate);
-        setLastGuessDate(currentDate);
-        localStorage.setItem('guesses', '[]');
-        setGuesses([]);
-    }
+    };
 
     return (
         <main>
             <section className='inputSection'>
                 <Input search={search} />
-                <ListOptions options={JSONArray.filter((_, index) => options.includes(index))} sendGuess={addGuess} showDamage={showDamage} showScaling={showScaling} guesses={guesses} />
+                <ListOptions options={JSONArray.filter((_, index) => options.includes(index) && !guesses.includes(index))} sendGuess={addGuess} showDamage={showDamage} showDamageNegation={showDamageNegation} showScaling={showScaling} />
             </section>
             <table>
                 <thead>
@@ -93,25 +92,28 @@ function WeaponGuesser() {
                         <th colSpan={2}>Weapon</th>
                         <th>Type</th>
                         <th>Damage Type</th>
-                        <th>Damage Negation</th>
+                        {showDamageNegation ? <th>Damage Negation</th> : ''}
                         <th>Required Stats</th>
                         <th>Status Effect</th>
                         <th>Weight</th>
                         <th>Upgrade Material</th>
                     </tr>
                 </thead>
-                <ListGuesses guesses={guesses.map(i => JSONArray.at(i)!)} todaysEldendle={JSONArray.at(todaysEldendle)!} showDamage={showDamage} showScaling={showScaling} />
+                <ListGuesses guesses={guesses.map(i => JSONArray.at(i)!)} todaysEldendle={JSONArray.at(todaysEldendle)!} showDamage={showDamage} showDamageNegation={showDamageNegation} showScaling={showScaling} />
             </table>
             <section className='hintSection'>
                 <h3>Hints</h3>
                 <input type='checkbox' name='showValues' checked={showDamage} onChange={() => { setShowingDamage(showDamage => !showDamage) }} />
                 <label>Show damage type values</label>
                 <br />
+                <input type='checkbox' name='showValues' checked={showDamageNegation} onChange={() => { setShowingDamageNegation(showDamageNegation => !showDamageNegation) }} />
+                <label>Show damage negations</label>
+                <br />
                 <input type='checkbox' name='showValues' checked={showScaling} onChange={() => { setShowingScaling(showScaling => !showScaling) }} />
                 <label>Show attribute scaling tier</label>
             </section>
         </main>
-    )
-}
+    );
+};
 
 export default WeaponGuesser;

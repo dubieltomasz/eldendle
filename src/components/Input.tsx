@@ -1,4 +1,4 @@
-import './Input.css';
+import '../styles/Input.css';
 
 interface Prop {
     search: (match: string) => void;

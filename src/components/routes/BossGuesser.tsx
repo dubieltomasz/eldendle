@@ -1,4 +1,4 @@
-import '../components/WeaponGuesser.css';
+import '../../styles/WeaponGuesser.css';
 
 function BossGuesser() {
     return (

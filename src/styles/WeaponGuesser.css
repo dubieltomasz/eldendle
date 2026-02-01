@@ -1,5 +1,6 @@
 main {
-  width: 60%;
+  width: 80%;
+  border: none;
   text-align: center;
   display: flex;
   align-items: center;

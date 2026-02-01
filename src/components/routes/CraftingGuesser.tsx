@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Input2 from '../components/Input2.tsx';
-import ListOptions2 from '../components/ListOptions2.tsx';
-import JSONArray from '../../public/craftingData.json';
-import ListGuesses2 from '../components/ListGuesses2.tsx';
-import '../components/CraftingGuesser.css';
+import Input from '../Input.tsx';
+import ListOptions2 from '../ListOptions2.tsx';
+import JSONArray from '../../../public/craftingData.json';
+import ListGuesses2 from '../ListGuesses2.tsx';
+import '../../styles/CraftingGuesser.css';
 
 function CraftingGuesser() {
     //const [todaysEldendle, setTodaysEldendle] = useState<number>(new Date().getDate() % JSONArray.length);
@@ -30,7 +30,19 @@ function CraftingGuesser() {
         if (guess === todaysEldendle) {
             alert('You won!!!');
         }
-    }
+    };
+
+    function search(inputValue: string) {
+        const matches: number[] = [];
+
+        JSONArray.forEach((record, index: number) => {
+            if (record.name.toLocaleLowerCase().match(inputValue)) {
+                matches.push(index);
+            }
+        })
+
+        setOptions(matches);
+    };
 
     const currentDate: string = new Date().toISOString().split('T')[0];
 
@@ -51,12 +63,12 @@ function CraftingGuesser() {
                 <div className='materialCard'>{guesses.length < 4 ? "Material" : JSONArray.at(todaysEldendle)!!.ingredients.length > 3 ? JSONArray.at(todaysEldendle)!!.ingredients[3].material : "None"}</div>
             </section>
             <section className='inputSection'>
-                <Input2 search={setOptions} />
+                <Input search={search} />
                 <ListOptions2 options={options} guesses={guesses} sendGuess={addGuess} />
             </section>
             <ListGuesses2 guesses={guesses} todaysEldendle={todaysEldendle}/>
         </main>
     );
-}
+};
 
 export default CraftingGuesser;
