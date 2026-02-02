@@ -3,6 +3,7 @@ import Input from '../Input.tsx';
 import ListOptions from '../ListOptions.tsx';
 import ListGuesses from '../ListGuesses.tsx';
 import JSONArray from '../../../public/weaponData.json';
+import '../../styles/WeaponGuesser.css';
 
 export interface Record {
     name: string;

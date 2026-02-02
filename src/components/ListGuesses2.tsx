@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import JSONarray from '../../public/craftingData.json';
 import '../styles/ListGuesses2.css';
 
@@ -8,11 +9,20 @@ interface Prop {
 
 function ListGuesses2({ guesses, todaysEldendle }: Prop) {
     return (
-        <section className='guessList'>
-            {[...guesses].reverse().map((value) => (
-                <div className={'guessCard' + (value === todaysEldendle ? ' good' : ' wrong')}>{JSONarray.at(value)!!.name}</div>
-            ))}
-        </section>
+        <AnimatePresence>
+            <ul className='guessList'>
+                {[...guesses].reverse().map((value, index) => (
+                    <motion.li className={'guessCard' + (value === todaysEldendle ? ' good' : ' wrong')}
+                        initial={{ opacity: 0.0, y: -10 }}
+                        animate={{ opacity: 1.0, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        key={guesses.length - 1 - index}
+                    >
+                        {JSONarray.at(value)!!.name}
+                    </motion.li>
+                ))}
+            </ul>
+        </AnimatePresence>
     );
 };
 

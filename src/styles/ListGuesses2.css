@@ -17,7 +17,7 @@
     #1B1914
   );
 
-  width: 40%;
+  width: 15%;
   height: 5em;
   border: 0.15em solid var(--border-color);
   border-radius: 0.5em;
@@ -37,7 +37,7 @@
   transition: border 0.25s ease-in, border-radius 0.25s ease-in;
 }
 
-div.good {
+li.good {
   background: linear-gradient(
     180deg,
     #084217,
@@ -45,7 +45,7 @@ div.good {
   );
 }
 
-div.wrong {
+li.wrong {
   background: linear-gradient(
     180deg,
     #3b0505,

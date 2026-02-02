@@ -1,70 +1,68 @@
 main {
-  width: 80%;
-  border: none;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+    width: 80%;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .inputSection {
-  width: 100%;
-  border-radius: 1em;
-  padding: 0.5vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  backdrop-filter: blur(100px);
-  border: 0.01em solid #0D0D09;
+    width: 100%;
+    border-radius: 1em;
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(100px);
+    border: 0.01em solid #0D0D09;
 }
 
 .hintSection {
-  width: 20%;
-  border-radius: 1em;
-  padding: 0.5vw;
-  text-align: left;
-  backdrop-filter: blur(100px);
-  border: 0.01em solid #0D0D09;
+    width: 20%;
+    border-radius: 1em;
+    padding: 0.5vw;
+    text-align: left;
+    backdrop-filter: blur(100px);
+    border: 0.01em solid #0D0D09;
 }
 
-.hintSection > h3 {
-  margin: 0;
-  text-align: center;
+.hintSection>h3 {
+    margin: 0;
+    text-align: center;
 }
 
 table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0.5vw;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5vw;
 }
 
-th, td {
-  font-family: "EB Garamond", serif;
+th,
+td {
+    font-family: "EB Garamond", serif;
 
-  background: linear-gradient(
-    180deg,
-    #1D1C17,
-    #1B1914
-  );
+    background:
+        linear-gradient(180deg,
+            #1D1C17,
+            #1B1914);
 
-  width: 12%;
-  height: 5em;
-  border: 0.15em solid var(--border-color);
-  border-radius: 0.5em;
+    width: 12%;
+    height: 5em;
+    border: 0.15em solid var(--border-color);
+    border-radius: 0.5em;
 
-  color: var(--text-color);
-  font-size: 1rem;
-  letter-spacing: 0.06em;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 0.06em;
 
-  outline: none;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 220, 150, 0.08),
-    inset 0 -8px 16px rgba(0, 0, 0, 0.6);
-
-  transition: border 0.25s ease-in, border-radius 0.25s ease-in;
+    outline: none;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 220, 150, 0.08),
+        inset 0 -8px 16px rgba(0, 0, 0, 0.6);
 }
 
 p {
-  height: 1em;
-  margin: 0.2em;
+    height: 1em;
+    margin: 0.2em;
 }
