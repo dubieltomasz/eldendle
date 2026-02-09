@@ -9,6 +9,97 @@ interface Prop {
     showScaling: boolean;
 };
 
+function ProperWeaponType(value: number): string {
+    switch (value) {
+        case 1:
+            return 'dagger';
+        case 3:
+            return 'straight sword';
+        case 5:
+            return 'greatsword';
+        case 7:
+            return 'colossal sword';
+        case 9:
+            return 'curved sword';
+        case 11:
+            return 'curved greatsword';
+        case 13:
+            return 'katana';
+        case 14:
+            return 'twinblade';
+        case 15:
+            return 'thrusting sword';
+        case 16:
+            return 'heavy thrusting sword';
+        case 17:
+            return 'axe';
+        case 19:
+            return 'greataxe';
+        case 21:
+            return 'hammer';
+        case 23:
+            return 'greathammer';
+        case 24:
+            return 'flail';
+        case 25:
+            return 'spear';
+        case 28:
+            return 'greatspear';
+        case 29:
+            return 'halberd';
+        case 31:
+            return 'scythe';
+        case 35:
+            return 'fist';
+        case 37:
+            return 'claws';
+        case 39:
+            return 'whip';
+        case 41:
+            return 'colossal weapon';
+        case 50:
+            return 'light bow';
+        case 51:
+            return 'bow';
+        case 53:
+            return 'greatbow';
+        case 55:
+            return 'crossbow';
+        case 56:
+            return 'ballistae';
+        case 57:
+            return 'glintstone staff';
+        case 61:
+            return 'sacred seals';
+        case 65:
+            return 'small shield';
+        case 67:
+            return 'medium shield';
+        case 69:
+            return 'greatshield';
+        case 87:
+            return 'torch';
+        case 88:
+            return 'hand-to-hand art';
+        case 89:
+            return 'perfume bottle';
+        case 90:
+            return 'thrusting shield';
+        case 91:
+            return 'throwing blade';
+        case 92:
+            return 'backhand blade';
+        case 93:
+            return 'light greatsword';
+        case 94:
+            return 'greatkatana';
+        case 95:
+            return 'beast claw';
+        default:
+            return 'unknown'
+    }
+}
+
 function ListOptions({ options, sendGuess, showDamage, showDamageNegation, showScaling }: Prop) {
     function StatusEffect(value: number): string {
         switch (value) {
@@ -57,7 +148,7 @@ function ListOptions({ options, sendGuess, showDamage, showDamageNegation, showS
                     <tr key={index} onClick={() => sendGuess(option)} className='hoverAnim'>
                         <td>Picture</td>
                         <td>{option.name}</td>
-                        <td>{option.wepType}</td>
+                        <td>{ProperWeaponType(option.wepType)}</td>
                         <td>
                             {option.attackPhy !== 0 ? <p>Phy{showDamage ? ' ' + option.attackPhy : ''}</p> : ''}
                             {option.attackMag !== 0 ? <p>Mag{showDamage ? ' ' + option.attackMag : ''}</p> : ''}
