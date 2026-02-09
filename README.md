@@ -3,7 +3,7 @@
 
 ![last commit](https://img.shields.io/github/last-commit/dubieltomasz/eldendle?style=for-the-badge)
 
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/0de2c40f-9751-4a75-825a-2aebb89d2c41" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/8b0910c8-4634-48ed-b7d3-806c045c2c3b" />
 
 ## Built with
 The project was created with **Vite** + **React** + **TypeScript**.
