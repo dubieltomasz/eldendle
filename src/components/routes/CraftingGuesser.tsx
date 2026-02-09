@@ -4,10 +4,11 @@ import ListOptions2 from '../ListOptions2.tsx';
 import JSONArray from '../../../public/craftingData.json';
 import ListGuesses2 from '../ListGuesses2.tsx';
 import '../../styles/CraftingGuesser.css';
+import { TodaysEldendle } from '../randomizer.ts';
 
 function CraftingGuesser() {
     //const [todaysEldendle, setTodaysEldendle] = useState<number>(new Date().getDate() % JSONArray.length);
-    const todaysEldendle: number = new Date().getDate() % JSONArray.length;
+    const todaysEldendle: number = TodaysEldendle(JSONArray.length);
 
     const [lastGuessDate, setLastGuessDate] = useState<string>(
         localStorage.getItem('lastGuessDate3') ? localStorage.getItem('lastGuessDate3')!! : ''
@@ -55,7 +56,6 @@ function CraftingGuesser() {
 
     return (
         <main>
-            <h3>Guess item by its crafting materials</h3>
             <section className='materialBox'>
                 <div className='materialCard'>{guesses.length < 1 ? "Material" : JSONArray.at(todaysEldendle)!!.ingredients[0].material}</div>
                 <div className='materialCard'>{guesses.length < 2 ? "Material" : JSONArray.at(todaysEldendle)!!.ingredients.length > 1 ? JSONArray.at(todaysEldendle)!!.ingredients[1].material : "None"}</div>
@@ -64,9 +64,16 @@ function CraftingGuesser() {
             </section>
             <section className='inputSection'>
                 <Input search={search} />
-                <ListOptions2 options={options} guesses={guesses} sendGuess={addGuess} />
+                <ListOptions2
+                    options={options}
+                    guesses={guesses}
+                    sendGuess={addGuess}
+                />
             </section>
-            <ListGuesses2 guesses={guesses} todaysEldendle={todaysEldendle}/>
+            <ListGuesses2
+                guesses={guesses}
+                todaysEldendle={todaysEldendle}
+            />
         </main>
     );
 };

@@ -16,10 +16,9 @@ function Header() {
 function Nav() {
     return (
         <nav>
-            <Link to='/' style={{ textDecoration: 'none' }}><h2>Weapon Guesser</h2></Link>
-            <Link to='/bossguesser' style={{ textDecoration: 'none' }}><h2>Boss Guesser</h2></Link>
-            <Link to='/craftingguesser' style={{ textDecoration: 'none' }}><h2>Crafting Guesser</h2></Link>
-            <Link to='/' style={{ textDecoration: 'none' }}><h2 className='unavailable' title='Currently unavailable'>Location Guesser</h2></Link>
+            <Link to='/' style={{ textDecoration: 'none' }} title='Guess weapon from Elden Ring'><h2>Weapon Guesser</h2></Link>
+            <Link to='/bossguesser' style={{ textDecoration: 'none' }} title='Guess boss from Elden Ring'><h2>Enemy Guesser</h2></Link>
+            <Link to='/craftingguesser' style={{ textDecoration: 'none' }} title='Guess item by its crafting materials'><h2>Crafting Guesser</h2></Link>
         </nav>
     );
 };

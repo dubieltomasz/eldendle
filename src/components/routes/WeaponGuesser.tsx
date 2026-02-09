@@ -3,6 +3,7 @@ import Input from '../Input.tsx';
 import ListOptions from '../ListOptions.tsx';
 import ListGuesses from '../ListGuesses.tsx';
 import JSONArray from '../../../public/weaponData.json';
+import { TodaysEldendle } from '../randomizer.ts';
 import '../../styles/WeaponGuesser.css';
 
 export interface Record {
@@ -32,7 +33,7 @@ export interface Record {
 
 function WeaponGuesser() {
     //const [todaysEldendle, setTodaysEldendle] = useState<number>(new Date().getDate() % JSONArray.length);
-    const todaysEldendle: number = new Date().getDate() % JSONArray.length;
+    const todaysEldendle: number = TodaysEldendle(JSONArray.length);
 
     const [lastGuessDate, setLastGuessDate] = useState<string>(
         localStorage.getItem('lastGuessDate') ? localStorage.getItem('lastGuessDate')!! : ''
@@ -85,7 +86,13 @@ function WeaponGuesser() {
         <main>
             <section className='inputSection'>
                 <Input search={search} />
-                <ListOptions options={JSONArray.filter((_, index) => options.includes(index) && !guesses.includes(index))} sendGuess={addGuess} showDamage={showDamage} showDamageNegation={showDamageNegation} showScaling={showScaling} />
+                <ListOptions
+                    options={JSONArray.filter((_, index) => options.includes(index) && !guesses.includes(index))}
+                    sendGuess={addGuess}
+                    showDamage={showDamage}
+                    showDamageNegation={showDamageNegation}
+                    showScaling={showScaling}
+                />
             </section>
             <table>
                 <thead>
@@ -100,17 +107,38 @@ function WeaponGuesser() {
                         <th>Upgrade Material</th>
                     </tr>
                 </thead>
-                <ListGuesses guesses={guesses.map(i => JSONArray.at(i)!)} todaysEldendle={JSONArray.at(todaysEldendle)!} showDamage={showDamage} showDamageNegation={showDamageNegation} showScaling={showScaling} />
+                <ListGuesses
+                    guesses={guesses.map(i => JSONArray.at(i)!)}
+                    todaysEldendle={JSONArray.at(todaysEldendle)!}
+                    showDamage={showDamage}
+                    showDamageNegation={showDamageNegation}
+                    showScaling={showScaling}
+                />
             </table>
             <section className='hintSection'>
                 <h3>Hints</h3>
-                <input type='checkbox' name='showValues' checked={showDamage} onChange={() => { setShowingDamage(showDamage => !showDamage) }} />
+                <input
+                    type='checkbox'
+                    name='showValues'
+                    checked={showDamage}
+                    onChange={() => { setShowingDamage(showDamage => !showDamage) }}
+                />
                 <label>Show damage type values</label>
                 <br />
-                <input type='checkbox' name='showValues' checked={showDamageNegation} onChange={() => { setShowingDamageNegation(showDamageNegation => !showDamageNegation) }} />
+                <input
+                    type='checkbox'
+                    name='showValues'
+                    checked={showDamageNegation}
+                    onChange={() => { setShowingDamageNegation(showDamageNegation => !showDamageNegation) }}
+                />
                 <label>Show damage negations</label>
                 <br />
-                <input type='checkbox' name='showValues' checked={showScaling} onChange={() => { setShowingScaling(showScaling => !showScaling) }} />
+                <input
+                    type='checkbox'
+                    name='showValues'
+                    checked={showScaling}
+                    onChange={() => { setShowingScaling(showScaling => !showScaling) }}
+                />
                 <label>Show attribute scaling tier</label>
             </section>
         </main>

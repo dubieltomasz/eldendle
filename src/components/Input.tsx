@@ -4,7 +4,7 @@ interface Prop {
     search: (match: string) => void;
 };
 
-function input({ search }: Prop) {
+function Input({ search }: Prop) {
     function onChange(input: string) {
         let inputValue: string = input.trim().toLowerCase();
 
@@ -26,4 +26,4 @@ function input({ search }: Prop) {
     );
 };
 
-export default input;
+export default Input;

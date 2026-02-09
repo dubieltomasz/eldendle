@@ -1,18 +1,123 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import JSONArray from '../../public/bossData.json';
+import type { Record } from './routes/BossGuesser';
 
 interface Prop {
-    guesses: number[];
-    todaysEldendle: number;
-    showDamage: boolean;
-    showScaling: boolean;
+    guesses: Record[];
+    todaysEldendle: Record;
 };
 
-function showDifference(actual: number, expected: number): string {
-    return actual !== expected ? actual < expected ? '↑' : '↓' : '';
+function Resistances(array: number[]) {
+    const result = [];
+    if (array[0] === 999) {
+        result.push('Poison');
+    }
+    if (array[1] === 999) {
+        result.push('Scarlet Rot');
+    }
+    if (array[2] === 999) {
+        result.push('Hemorrhage');
+    }
+    if (array[3] === 999) {
+        result.push('Freeze');
+    }
+    if (array[4] === 999) {
+        result.push('Sleep');
+    }
+    if (array[5] === 999) {
+        result.push('Madness');
+    }
+    if (array[6] === 999) {
+        result.push('Curse');
+    }
+    return result;
+};
+
+function Weaknesses(array: number[]) {
+    const minimal: number = Math.min(...array);
+    const result = [];
+
+    if (array[0] === minimal || array[0] < 0) {
+        result.push('Standard');
+    }
+    if (array[1] === minimal || array[1] < 0) {
+        result.push('Slash');
+    }
+    if (array[2] === minimal || array[2] < 0) {
+        result.push('Strike');
+    }
+    if (array[3] === minimal || array[3] < 0) {
+        result.push('Pierce');
+    }
+    if (array[4] === minimal || array[4] < 0) {
+        result.push('Magic');
+    }
+    if (array[5] === minimal || array[5] < 0) {
+        result.push('Fire');
+    }
+    if (array[6] === minimal || array[6] < 0) {
+        result.push('Lightning');
+    }
+    if (array[7] === minimal || array[7] < 0) {
+        result.push('Holy');
+    }
+    return result;
+};
+
+function ProperColor(value: number | boolean): string {
+    switch (value) {
+        case false:
+        case 0:
+            return '#3b0505';
+        case true:
+        case 1:
+            return '#084217';
+        default:
+            return '#493f0d';
+    }
 }
 
-function ListGuesses3({ guesses, todaysEldendle, showDamage, showScaling }: Prop) {
+function showHint(actual: number, expected: number): string {
+    return (actual !== expected ? actual < expected ? ' ↑' : ' ↓' : '');
+}
+
+function match(values1: string[], values2: string[]): number {
+    if (values1.every((value) => values2.includes(value))) {
+        return 1;
+    } else if (values1.some((value) => values2.includes(value))) {
+        return 2;
+    } else {
+        return 0;
+    }
+}
+
+function TD(value: string | number, color: string, delay: number) {
+    return (
+        <motion.td
+            initial={{ background: 'linear-gradient(180deg, #1D1C17, #1B1914)' }}
+            animate={{ background: 'linear-gradient(180deg, ' + color + ', #1B1914)' }}
+            transition={{ duration: 0.5, delay: delay }}
+        >
+            <p>{value}</p>
+        </motion.td>
+    );
+}
+
+function TD2(array: string[] | number[], color: string, delay: number) {
+    return (
+        <motion.td
+            initial={{ background: 'linear-gradient(180deg, #1D1C17, #1B1914)' }}
+            animate={{ background: 'linear-gradient(180deg, ' + color + ', #1B1914)' }}
+            transition={{ duration: 0.5, delay: delay }}
+        >
+            {array.map((value) =>
+                <p>{value}</p>
+            )}
+        </motion.td>
+    );
+}
+
+function ListGuesses3({ guesses, todaysEldendle }: Prop) {
     return (
         <tbody>
             <AnimatePresence>
@@ -21,39 +126,77 @@ function ListGuesses3({ guesses, todaysEldendle, showDamage, showScaling }: Prop
                         initial={{ opacity: 0.0, y: -10 }}
                         animate={{ opacity: 1.0, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        key={guesses.length - 1 - index}>
-                        <td>Picture</td>
-                        <td className={guess === todaysEldendle ? 'good' : 'veryWrong'}>{JSONArray.at(guess)!!.name}</td>
-                        <td className={JSONArray.at(guess)!!.poise === JSONArray.at(todaysEldendle)!!.poise ? 'good' : 'veryWrong'}>{JSONArray.at(guess)!!.poise}</td>
-                        <td>
-                            <p>Poison{showDamage ? ' ' + JSONArray.at(guess)!!.resist_poison + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_poison.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_poison.toString())) : ''}</p>
-                            <p>Rot{showDamage ? ' ' + JSONArray.at(guess)!!.resist_rot + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_rot.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_rot.toString())) : ''}</p>
-                            <p>Bloodloss{showDamage ? ' ' + JSONArray.at(guess)!!.resist_bloodloss + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_bloodloss.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_bloodloss.toString())) : ''}</p>
-                            <p>Freeze{showDamage ? ' ' + JSONArray.at(guess)!!.resist_freeze + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_freeze.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_freeze.toString())) : ''}</p>
-                            <p>Sleep{showDamage ? ' ' + JSONArray.at(guess)!!.resist_sleep + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_sleep.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_sleep.toString())) : ''}</p>
-                            <p>Madness{showDamage ? ' ' + JSONArray.at(guess)!!.resist_madness + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_madness.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_madness.toString())) : ''}</p>
-                            <p>Curse{showDamage ? ' ' + JSONArray.at(guess)!!.resist_curse + showDifference(Number.parseInt(JSONArray.at(guess)!!.resist_curse.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.resist_curse.toString())) : ''}</p>
-                        </td>
-                        <td>
-                            {JSONArray.at(guess)!!.standard_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.standard_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.standard_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.standard_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.slash_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.slash_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.slash_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.slash_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.strike_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.strike_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.strike_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.strike_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.pierce_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.pierce_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.pierce_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.pierce_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.magic_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.magic_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.magic_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.magic_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.fire_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.fire_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.fire_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.fire_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.lightning_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.lightning_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.lightning_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.lightning_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.holy_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.holy_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.holy_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.holy_negation.toString())) : ''}</p> : ''}
-                        </td>
-                        <td>
-                            {JSONArray.at(guess)!!.standard_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.standard_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.standard_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.standard_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.slash_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.slash_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.slash_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.slash_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.strike_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.strike_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.strike_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.strike_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.pierce_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.pierce_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.pierce_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.pierce_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.magic_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.magic_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.magic_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.magic_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.fire_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.fire_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.fire_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.fire_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.lightning_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.lightning_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.lightning_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.lightning_negation.toString())) : ''}</p> : ''}
-                            {JSONArray.at(guess)!!.holy_negation > 1 ? <p>Physical{showScaling ? ' ' + JSONArray.at(guess)!!.holy_negation + showDifference(Number.parseInt(JSONArray.at(guess)!!.holy_negation.toString()), Number.parseInt(JSONArray.at(todaysEldendle)!!.holy_negation.toString())) : ''}</p> : ''}
-                        </td>
+                        key={guesses.length - 1 - index}
+                    >
+                        {TD('Picture', ProperColor(guess === todaysEldendle), 0.5)}
+                        {TD(guess.name, ProperColor(guess.name === todaysEldendle.name), 1)}
+                        {TD(guess.poise + showHint(guess.poise, todaysEldendle.poise), ProperColor(guess.poise === todaysEldendle.poise), 1.5)}
+                        {TD2(
+                            Resistances([
+                                guess.resist_poison,
+                                guess.resist_rot,
+                                guess.resist_bloodloss,
+                                guess.resist_freeze,
+                                guess.resist_sleep,
+                                guess.resist_madness,
+                                guess.resist_curse
+                            ]),
+                            ProperColor(match(
+                                Resistances([
+                                    guess.resist_poison,
+                                    guess.resist_rot,
+                                    guess.resist_bloodloss,
+                                    guess.resist_freeze,
+                                    guess.resist_sleep,
+                                    guess.resist_madness,
+                                    guess.resist_curse
+                                ]),
+                                Resistances([
+                                    todaysEldendle.resist_poison,
+                                    todaysEldendle.resist_rot,
+                                    todaysEldendle.resist_bloodloss,
+                                    todaysEldendle.resist_freeze,
+                                    todaysEldendle.resist_sleep,
+                                    todaysEldendle.resist_madness,
+                                    todaysEldendle.resist_curse
+                                ])
+                            )),
+                            2
+                        )}
+                        {TD2(
+                            Weaknesses([
+                                guess.standard_negation,
+                                guess.slash_negation,
+                                guess.strike_negation,
+                                guess.pierce_negation,
+                                guess.magic_negation,
+                                guess.fire_negation,
+                                guess.lightning_negation,
+                                guess.holy_negation,
+                            ]),
+                            ProperColor(match(
+                                Weaknesses([
+                                    guess.standard_negation,
+                                    guess.slash_negation,
+                                    guess.strike_negation,
+                                    guess.pierce_negation,
+                                    guess.magic_negation,
+                                    guess.fire_negation,
+                                    guess.lightning_negation,
+                                    guess.holy_negation,
+                                ]),
+                                Weaknesses([
+                                    todaysEldendle.standard_negation,
+                                    todaysEldendle.slash_negation,
+                                    todaysEldendle.strike_negation,
+                                    todaysEldendle.pierce_negation,
+                                    todaysEldendle.magic_negation,
+                                    todaysEldendle.fire_negation,
+                                    todaysEldendle.lightning_negation,
+                                    todaysEldendle.holy_negation,
+                                ]))),
+                            2.5
+                        )}
                     </motion.tr>
                 ))}
             </AnimatePresence>
